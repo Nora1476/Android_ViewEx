@@ -13,10 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewEx"
         tools:targetApi="31">
-
         <activity
-            android:name=".TextActivity"
-            android:exported="true">
+            android:name=".MainActivity2"
+            android:exported="true" >
             //intent-filter 설정된 activity가 메인으로 실행됨
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,10 +25,11 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".TextActivity" android:exported="true">
+        </activity>
 
-
+        <activity
+            android:name=".MainActivity" android:exported="true">
         </activity>
 
         <meta-data

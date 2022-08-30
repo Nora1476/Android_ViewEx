@@ -30,9 +30,27 @@ public class TextActivity extends AppCompatActivity {
     button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if(edName.getFreezesText()){
-          edName.setHint("Please Check Name!");
+        if(edName.getText().toString().equals("")){
+          edName.setHint("Please Check the Name!");
           edName.requestFocus();
+          return;
+        }
+        if(edId.getText().toString().equals("")){
+          edId.setHint("Please Check the Id!");
+          edId.requestFocus();
+          return;
+        }
+
+        if(!edRepass.getText().toString().equals(edPass.getText())){
+          edPass.setText("");
+          edRepass.setText("");
+          edPass.setHint("Please Check the PassWord!");
+          edPass.requestFocus();
+          return;
+        }
+        if(edMobile.getText().toString().equals("")){
+          edMobile.setHint("Please Check the Mobile!");
+          edMobile.requestFocus();
           return;
         }
       }
